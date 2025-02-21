@@ -27,14 +27,16 @@ spec:
       labels:
         app: bridge-server
     spec:
-      imagePullSecrets:
-        -name: ecr-secret
+      nodeSelector:   
+        kubernetes.io/arch: amd64
       containers:
       - name: bridge-server
-        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/bridge:1
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
+        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/bridge:2
         ports:
         - containerPort: 8100
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+      imagePullSecrets:
+      - name: ecr-secret
