@@ -27,6 +27,8 @@ spec:
       labels:
         app: bridge-server
     spec:
+      imagePullSecrets:
+        -name: ecr-secret
       containers:
       - name: bridge-server
         image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/bridge:1
