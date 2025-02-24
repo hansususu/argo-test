@@ -36,10 +36,6 @@ spec:
             secretKeyRef:
               name: db-credentials
               key: host
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8080
 ---

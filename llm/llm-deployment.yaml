@@ -19,10 +19,6 @@ spec:
       containers:
       - name: llm-server
         image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/llm:2
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8000
 ---

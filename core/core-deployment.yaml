@@ -20,10 +20,6 @@ spec:
       containers:
       - name: core-server-container
         image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/core:2
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8081
 ---

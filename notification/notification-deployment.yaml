@@ -25,10 +25,6 @@ spec:
           value: "root"
         - name: SPRING_DATASOURCE_PASSWORD
           value: "1234"
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8084
 ---
