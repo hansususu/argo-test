@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: llm-server
-        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/llm:6
+        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/llm:7
         ports:
         - containerPort: 8080
         env:
