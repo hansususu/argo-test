@@ -21,6 +21,17 @@ spec:
         image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/llm:4
         ports:
         - containerPort: 8080
+        env:
+          - name: GOOGLE_APPLICATION_CREDENTIALS
+            value: "/secrets/gcp/credentials.json"
+        volumeMounts:
+            - name: gcp-credentials
+              mountPath: /secrets/gcp
+              readOnly: true
+    volumes:
+        - name: gcp-credentials
+          secret:
+            secretName: gcp-credentials
 ---
 apiVersion: v1
 kind: Service
