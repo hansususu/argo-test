@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: auth-server-container
-        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/auth:5
+        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/auth:6
         ports:
         - containerPort: 8080
 ---
