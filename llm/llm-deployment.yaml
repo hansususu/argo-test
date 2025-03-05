@@ -61,7 +61,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: llm-server-service
-  annotiations:
+  annotations:
     alb.ingress.kubernetes.io/healthcheck-path: /llm/base/health
 spec:
   selector:
