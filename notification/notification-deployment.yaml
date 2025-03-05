@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: notification-server-container
-        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/notification:3
+        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/notification:4
         env:
         - name: SPRING_DATASOURCE_URL
           value: "jdbc:mariadb://mariadb:3306/bomnet_db"
