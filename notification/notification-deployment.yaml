@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: notification-server-container
-        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/notification:4
+        image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/notification:3
         env:
         - name: DB_PASSWORD
           valueFrom:
@@ -41,6 +41,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: notification-server-service
+  annotiations:
+    alb.ingress.kubernetes.io/healthcheck-path: /noti/health
 spec:
   selector:
     app: notification-server
