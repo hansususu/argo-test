@@ -32,22 +32,22 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: db-credentials
-                  key: DB_PORT
+                  key: port
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
                   name: db-credentials
-                  key: DB_USER
+                  key: username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: db-credentials
-                  key: DB_PASSWORD
+                  key: password
             - name: DB_NAME
               valueFrom:
                 secretKeyRef:
                   name: db-credentials
-                  key: DB_NAME
+                  key: dbname
           volumeMounts:
             - name: gcp-credentials
               mountPath: /secrets/gcp
