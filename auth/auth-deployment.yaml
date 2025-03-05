@@ -20,6 +20,11 @@ spec:
       containers:
       - name: auth-server-container
         image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/auth:9
+        envFrom:
+        - secretRef:
+            name: db-credentials
+        - configMapRef:
+            name: db-config
         ports:
         - containerPort: 8080
 ---
@@ -33,6 +38,6 @@ spec:
   selector:
     app: auth-server
   ports:
-    - nodePort: 30010
+    - protocol: TCP
       port: 8080
       targetPort: 8080
