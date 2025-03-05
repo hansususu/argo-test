@@ -63,7 +63,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: core-server-service
-  annotiations:
+  annotations:
     alb.ingress.kubernetes.io/healthcheck-path: /core/health
 spec:
   selector:
