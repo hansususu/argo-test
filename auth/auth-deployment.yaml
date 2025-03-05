@@ -62,6 +62,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: auth-server-service
+  annotiations:
+    alb.ingress.kubernetes.io/healthcheck-path: /auth/health
 spec:
   selector:
     app: auth-server
