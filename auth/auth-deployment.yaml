@@ -17,7 +17,7 @@ spec:
         kubernetes.io/arch: amd64  # Ensure you're targeting the correct architecture
       containers:
         - name: auth-server
-          image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/auth:9
+          image: 575108933149.dkr.ecr.ap-northeast-2.amazonaws.com/bombi/auth:10
           ports:
             - containerPort: 8080
           env:
